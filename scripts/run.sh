@@ -7,6 +7,8 @@ set -e
 echo 'See https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408'
 echo 'docker -v >= 19.03'
 docker -v
+echo 'export DOCKER_CLI_EXPERIMENTAL=enabled'
+export DOCKER_CLI_EXPERIMENTAL=enabled
 echo 'linux kernel version, uname -r >= 4.8'
 uname -r
 echo '/proc/sys/fs/binfmt_misc/ must exist'

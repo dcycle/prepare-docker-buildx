@@ -3,6 +3,8 @@ Prepare Docker Buildx
 
 Used to make sure `docker buildx` can be used on Linux Docker Digital Ocean Droplets built late 2021, with the goal of creating images which run natively on the Apple M1 chip.
 
+**A very big thanks to Artur Klauser whose article [Building Multi-Architecture Docker Images With Buildx, Artur Klauser, Medium, Jan 18, 2020](https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408) this project was based upon.**
+
 Usage
 -----
 
@@ -22,7 +24,4 @@ Example resulting image
 
 * <https://hub.docker.com/r/dcycle/buildx-test>
 
-Resources
------
 
-* [Building Multi-Architecture Docker Images With Buildx, Artur Klauser, Medium, Jan 18, 2020](https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408)

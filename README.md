@@ -1,7 +1,7 @@
 Prepare Docker Buildx
 -----
 
-Used to make sure `docker buildx` can be used on Linux hosts.
+Used to make sure `docker buildx` can be used on Linux Docker Digital Ocean Droplets built late 2021.
 
 Usage
 -----

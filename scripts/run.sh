@@ -21,5 +21,7 @@ echo 'qemu-aarch64-static --version'
 qemu-aarch64-static --version
 echo 'update-binfmts --version >= 2.1.7'
 update-binfmts --version
+echo 'scripts/reregister-qemu-binfmt.sh'
+./scripts/reregister-qemu-binfmt.sh
 echo 'check-qemu-binfmt.sh'
 ./scripts/check-qemu-binfmt.sh

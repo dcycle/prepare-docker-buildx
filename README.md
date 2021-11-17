@@ -17,6 +17,7 @@ Start by making sure you have an account on [the Docker Hub](https://hub.docker.
     docker buildx create --name mybuilder
     docker buildx use mybuilder
     docker buildx inspect --bootstrap
+    docker login -u"$DOCKERHUBUSER" -p"$DOCKERHUBPASS"
     docker buildx build -t "$DOCKERHUBUSER"/buildx-test:1 --platform linux/amd64,linux/arm64/v8 --push .
 
 Example resulting image

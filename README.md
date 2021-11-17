@@ -10,10 +10,17 @@ Start by making sure you have an account on [the Docker Hub](https://hub.docker.
 
     DOCKERHUBUSER=my_docker_hub_user
     DOCKERHUBPASS=princess
-    export DOCKER_CLI_EXPERIMENTAL=enabled && ./scripts/run.sh
+    export DOCKER_CLI_EXPERIMENTAL=enabled
+    ./scripts/run.sh
     docker buildx create --name mybuilder
     docker buildx use mybuilder
     docker buildx inspect --bootstrap
+    docker buildx build -t "$DOCKERHUBUSER"/buildx-test:1 --platform linux/amd64,linux/arm64/v8 --push .
+
+Example resulting image
+-----
+
+* <https://hub.docker.com/r/dcycle/buildx-test>
 
 Resources
 -----

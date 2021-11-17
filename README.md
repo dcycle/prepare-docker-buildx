@@ -20,6 +20,11 @@ Start by making sure you have an account on [the Docker Hub](https://hub.docker.
     docker login -u"$DOCKERHUBUSER" -p"$DOCKERHUBPASS"
     docker buildx build -t "$DOCKERHUBUSER"/buildx-test:1 --platform linux/amd64,linux/arm64/v8 --push .
 
+Example speed increases
+-----
+
+Although M1 can run Intel images in emulation, you will get way better performance by creating native images. See [Docker PHP on the M1 chip, example with Static Analysis on Drupal: 9 times faster, Dcycle Blog, November 17, 2021](https://blog.dcycle.com/blog/2021-11-17/m1-docker-php-speed-test/).
+
 Example resulting image
 -----
 

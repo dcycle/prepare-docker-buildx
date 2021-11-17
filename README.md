@@ -6,7 +6,7 @@ Used to make sure `docker buildx` can be used on Linux Docker Digital Ocean Drop
 Usage
 -----
 
-    ./scripts/run.sh
+    export DOCKER_CLI_EXPERIMENTAL=enabled && ./scripts/run.sh
 
 Resources
 -----

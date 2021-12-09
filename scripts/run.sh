@@ -12,7 +12,7 @@ uname -r
 echo '/proc/sys/fs/binfmt_misc/ must exist'
 ls -lah /proc/sys/fs/binfmt_misc/
 echo 'Install qemu'
-./scripts/install-qemu.sh
+source ./scripts/lib/install-qemu.source.sh
 echo 'ls -l /usr/bin/qemu-aarch64-static'
 ls -l /usr/bin/qemu-aarch64-static
 echo 'qemu-aarch64-static --version'

@@ -1,11 +1,8 @@
 #!/bin/bash
 #
-# Install qemu.
+# Install qemu-user-static.
 #
 set -e
-
-# Make this command idempotent.
-rm -rf qemu
 
 echo "Must go through hoops because of https://cloudsupport.digitalocean.com/s/case/5004P00001hK6QuQAK/after-creating-droplet-could-not-get-lock-varlibdpkglockfrontend:"
 # Without this we will get
@@ -15,19 +12,4 @@ sudo rm -f /var/lib/apt/lists/lock
 sudo rm -f /var/lib/apt/lists/lock-frontend
 sudo rm -f /var/lib/dpkg/lock-frontend
 sudo rm -f /var/lib/dpkg/lock
-sudo apt-get -y install \
-  make \
-  ninja-build \
-  gcc \
-  pkg-config \
-  libglib2.0-dev \
-  libpixman-1-dev
-# We want the latest version, not the one on the package manager, to avoid
-# issues such as https://askubuntu.com/questions/1339558.
-# See https://www.qemu.org/download/.
-git clone --depth 1 https://gitlab.com/qemu-project/qemu.git
-cd qemu
-git submodule init
-git submodule update --recursive
-./configure
-make
+sudo sudo apt-get install -y qemu-user-static

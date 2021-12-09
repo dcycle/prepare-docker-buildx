@@ -33,6 +33,11 @@ If you would like the latest version of Qemu, you can run, instead of `./scripts
 
 This installs the latest version of Qemu, but can take an extremely long time to install, around one to two hours.
 
+Example speed increases
+-----
+
+Although M1 can run Intel images in emulation, you will get way better performance by creating native images. See [Docker PHP on the M1 chip, example with Static Analysis on Drupal: 9 times faster, Dcycle Blog, November 17, 2021](https://blog.dcycle.com/blog/2021-11-17/m1-docker-php-speed-test/).
+
 Example resulting image
 -----
 

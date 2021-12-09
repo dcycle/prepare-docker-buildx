@@ -20,6 +20,19 @@ Start by making sure you have an account on [the Docker Hub](https://hub.docker.
     docker login -u"$DOCKERHUBUSER" -p"$DOCKERHUBPASS"
     docker buildx build -t "$DOCKERHUBUSER"/buildx-test:1 --platform linux/amd64,linux/arm64/v8 --push .
 
+Gotchas
+-----
+
+This script relies on [Qemu](https://www.qemu.org).
+
+By default we install Qemu using the package manager, which is relatively fast, but which installs an earlier version of Qemu which can cause some errors [such as this one](https://askubuntu.com/questions/1339558).
+
+If you would like the latest version of Qemu, you can run, instead of `./scripts/run.sh`,
+
+    export INSTALL_QEMU_MAKE=1 && ./scripts/run.sh
+
+This installs the latest version of Qemu, but can take an extremely long time to install, around one to two hours.
+
 Example speed increases
 -----
 
@@ -29,5 +42,3 @@ Example resulting image
 -----
 
 * <https://hub.docker.com/r/dcycle/buildx-test>
-
-

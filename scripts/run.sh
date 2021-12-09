@@ -24,6 +24,6 @@ echo 'scripts/reregister-qemu-binfmt.sh'
 echo 'check-qemu-binfmt.sh'
 ./scripts/check-qemu-binfmt.sh
 echo 'Qemu version, should be 6 or more to avoid issues such as https://askubuntu.com/questions/1339558'
-/usr/bin/qemu-system-x86_64 --version
+/usr/bin/qemu-x86_64-static --version
 echo 'docker buildx'
 docker buildx

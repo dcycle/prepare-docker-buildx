@@ -20,7 +20,8 @@ sudo apt-get -y install \
   ninja-build \
   gcc \
   pkg-config \
-  libglib2.0-dev
+  libglib2.0-dev \
+  libpixman-1-dev
 # We want the latest version, not the one on the package manager, to avoid
 # issues such as https://askubuntu.com/questions/1339558.
 # See https://www.qemu.org/download/.

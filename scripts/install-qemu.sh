@@ -15,7 +15,7 @@ sudo rm -f /var/lib/apt/lists/lock
 sudo rm -f /var/lib/apt/lists/lock-frontend
 sudo rm -f /var/lib/dpkg/lock-frontend
 sudo rm -f /var/lib/dpkg/lock
-sudo apt-get -y install make ninja-build
+sudo apt-get -y install make ninja-build gcc
 
 # We want the latest version, not the one on the package manager, to avoid
 # issues such as https://askubuntu.com/questions/1339558.

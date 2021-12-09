@@ -20,8 +20,10 @@ Start by making sure you have an account on [the Docker Hub](https://hub.docker.
     docker login -u"$DOCKERHUBUSER" -p"$DOCKERHUBPASS"
     docker buildx build -t "$DOCKERHUBUSER"/buildx-test:1 --platform linux/amd64,linux/arm64/v8 --push .
 
-Gotchas
+Experimental feature in progress
 -----
+
+**This feature is experimental and under development; it is not ready for use.**
 
 This script relies on [Qemu](https://www.qemu.org).
 

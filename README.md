@@ -20,6 +20,15 @@ Start by making sure you have an account on [the Docker Hub](https://hub.docker.
     docker login -u"$DOCKERHUBUSER" -p"$DOCKERHUBPASS"
     docker buildx build -t "$DOCKERHUBUSER"/buildx-test:1 --platform linux/amd64,linux/arm64/v8 --push .
 
+Example using a Dockerfile
+-----
+
+In this project's example folder you will find a complete project which you can run directly on a new DigitalOcean Docker droplet. Once you create the droplet and log in, the following should work:
+
+    cd ~
+    git clone https://github.com/dcycle/prepare-docker-buildx.git
+    cd prepare-docker-buildx/example
+
 Experimental feature in progress
 -----
 

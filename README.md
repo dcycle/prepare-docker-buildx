@@ -28,6 +28,9 @@ In this project's example folder you will find a complete project which you can 
     cd ~
     git clone https://github.com/dcycle/prepare-docker-buildx.git
     cd prepare-docker-buildx/example
+    export DOCKERHUBUSER=my_docker_hub_user
+    export DOCKERHUBPASS=princess
+    ./build.sh
 
 Experimental feature in progress
 -----

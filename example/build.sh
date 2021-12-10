@@ -13,8 +13,6 @@ if [ -z "$DOCKERHUBPASS" ]; then
   exit 1
 fi
 
-# Make idempotent.
-rm -rf prepare-docker-buildx
 # See https://github.com/dcycle/prepare-docker-buildx, for M1 native images.
 git clone https://github.com/dcycle/prepare-docker-buildx.git
 cd prepare-docker-buildx

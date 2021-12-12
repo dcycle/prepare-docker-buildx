@@ -20,6 +20,27 @@ Start by making sure you have an account on [the Docker Hub](https://hub.docker.
     docker login -u"$DOCKERHUBUSER" -p"$DOCKERHUBPASS"
     docker buildx build -t "$DOCKERHUBUSER"/buildx-test:1 --platform linux/amd64,linux/arm64/v8 --push .
 
+The dreaded `dpkg: error processing package libc-bin (--configure)` error
+-----
+
+This one is truly ugly. At the time of this writing, it happens when I try to install git on the PHP:7.4 image on the ARM architecture, running QEMU emulation on a Ubuntu machine with the above script.
+
+I used a technique documented in the forum post [libc-bin error during upgrade, by sixdigit, Aug 21, 2020, Linux Mint Forums](https://forums.linuxmint.com/viewtopic.php?p=1871690) to get around this.
+
+[You can see a working example here](https://github.com/dcycle/prepare-docker-buildx/tree/master/example/Dockerfile).
+
+Example using a Dockerfile
+-----
+
+In this project's example folder you will find a complete project which you can run directly on a new DigitalOcean Docker droplet. Once you create the droplet and log in, the following should work:
+
+    cd ~
+    git clone https://github.com/dcycle/prepare-docker-buildx.git
+    cd prepare-docker-buildx/example
+    export DOCKERHUBUSER=my_docker_hub_user
+    export DOCKERHUBPASS=princess
+    ./build.sh
+
 Experimental feature in progress
 -----
 

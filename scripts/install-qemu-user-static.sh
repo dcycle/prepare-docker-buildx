@@ -12,4 +12,5 @@ sudo rm -f /var/lib/apt/lists/lock
 sudo rm -f /var/lib/apt/lists/lock-frontend
 sudo rm -f /var/lib/dpkg/lock-frontend
 sudo rm -f /var/lib/dpkg/lock
-sudo sudo apt-get install -y qemu-user-static
+sudo apt-get update -y
+sudo apt-get install -y qemu-user-static

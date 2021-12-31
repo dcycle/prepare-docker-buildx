@@ -25,9 +25,9 @@ The dreaded `dpkg: error processing package libc-bin (--configure)` error
 
 This one is truly ugly. At the time of this writing, it happens when I try to install git on the PHP:7.4 image on the ARM architecture, running QEMU emulation on a Ubuntu machine with the above script.
 
-I used a technique documented in the forum post [libc-bin error during upgrade, by sixdigit, Aug 21, 2020, Linux Mint Forums](https://forums.linuxmint.com/viewtopic.php?p=1871690) to get around this.
+I used a technique documented in the forum post [libc-bin error during upgrade, by sixdigit, Aug 21, 2020, Linux Mint Forums](https://forums.linuxmint.com/viewtopic.php?p=1871690) to get around this, but this causes further issues so I do not recommend it: [You can see a working example here](https://github.com/dcycle/prepare-docker-buildx/tree/master/example/Dockerfile).
 
-[You can see a working example here](https://github.com/dcycle/prepare-docker-buildx/tree/master/example/Dockerfile).
+Complete steps to reproduce can be found at https://github.com/docker-library/drupal/issues/206.
 
 Example using a Dockerfile
 -----

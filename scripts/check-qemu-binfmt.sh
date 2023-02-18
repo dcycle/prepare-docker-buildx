@@ -8,6 +8,8 @@
 # https://nexus.eddiesinentropy.net/2020/01/12/Building-Multi-architecture-Docker-Images-With-Buildx/
 # https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408
 
+export DOCKER_CLI_EXPERIMENTAL=enabled
+
 function error() {
   echo "ERROR: $*"
   exit 1

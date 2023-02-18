@@ -8,8 +8,6 @@
 # https://nexus.eddiesinentropy.net/2020/01/12/Building-Multi-architecture-Docker-Images-With-Buildx/
 # https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408
 
-export DOCKER_CLI_EXPERIMENTAL=enabled
-
 function error() {
   echo "ERROR: $*"
   exit 1
@@ -97,5 +95,8 @@ function check_qemu_binfmt() {
   echo "Host looks good for docker buildx multi-architecture support".
 }
 
-set -e
+set -ex
+export DOCKER_CLI_EXPERIMENTAL=enabled
+echo 'calling check_qemu_binfmt'
 check_qemu_binfmt "$@"
+echo 'just called check_qemu_binfmt'

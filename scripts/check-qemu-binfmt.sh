@@ -31,14 +31,6 @@ function check_qemu_binfmt() {
   if [[ "$(version "$docker_version")" < "$(version '19.03')" ]]; then
     error "docker $docker_version too old. Need >= 19.03"
   fi
-  docker_experimental="$(docker version | \
-                         awk '/^ *Experimental:/ {print $2 ; exit}')"
-  if [[ "$docker_experimental" != 'true' ]]; then
-    error "docker experimental flag not enabled:"\
-          "Set with 'export DOCKER_CLI_EXPERIMENTAL=enabled'"
-  else
-    ok "docker $docker_version supports buildx experimental feature."
-  fi
 
   # Kernel
   kernel_version="$(uname -r)"
@@ -95,5 +87,5 @@ function check_qemu_binfmt() {
   echo "Host looks good for docker buildx multi-architecture support".
 }
 
-set -e
+set -ex
 check_qemu_binfmt "$@"

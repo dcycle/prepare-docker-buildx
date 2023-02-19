@@ -4,8 +4,6 @@
 #
 set -ex
 
-echo "Starting in February 2023, we get ERROR: docker experimental flag not enabled: Set with 'export DOCKER_CLI_EXPERIMENTAL=enabled' even though that has been done in the calling script. So we're doing it again here."
-export DOCKER_CLI_EXPERIMENTAL=enabled
 echo 'See https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408'
 echo 'docker -v >= 19.03'
 docker -v

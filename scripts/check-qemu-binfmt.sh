@@ -88,7 +88,4 @@ function check_qemu_binfmt() {
 }
 
 set -ex
-export DOCKER_CLI_EXPERIMENTAL=enabled
-echo 'calling check_qemu_binfmt'
 check_qemu_binfmt "$@"
-echo 'just called check_qemu_binfmt'
